@@ -1,0 +1,28 @@
+{
+    "name": "Chess Notifier",
+    "description": "Get Chess.com notifications on Firefox.",
+    "version": "0.1.0",
+    "manifest_version": 2,
+    "developer": {
+        "name": "Saša Stamenković",
+        "url": "http://umpirsky.com"
+    },
+    "applications": {
+        "gecko": {
+            "id": "chess-notifier@umpirsky.com"
+        }
+    },
+    "icons": {
+        "48": "icons/pawn.png"
+    },
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "browser_action": {
+        "default_icon": "icons/pawn.png"
+    },
+    "permissions": ["*://api.chess.com/*", "tabs", "storage", "notifications"],
+    "options_ui": {
+        "page": "options.html"
+    }
+}
