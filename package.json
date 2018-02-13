@@ -1,0 +1,18 @@
+{
+  "name": "chess-notifier",
+  "version": "0.0.1",
+  "description": "Get Chess.com notifications on your desktop.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umpirsky/chess-notifier.git"
+  },
+  "author": "Saša Stamenković",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/umpirsky/chess-notifier/issues"
+  },
+  "homepage": "https://github.com/umpirsky/chess-notifier",
+  "dependencies": {
+    "webextension-polyfill": "0.2.1"
+  }
+}

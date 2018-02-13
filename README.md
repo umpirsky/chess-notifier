@@ -2,4 +2,4 @@
 
 Never loose on time again!
 
-Get Chess.com notifications on Firefox.
+Get Chess.com notifications on your desktop.
