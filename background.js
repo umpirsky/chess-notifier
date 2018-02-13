@@ -9,7 +9,7 @@ function update() {
                 return;
             }
 
-            fetch(`https://api.chess.com/int/player/${options.username}/notices`, {
+            fetch('https://api.chess.com/int/player/' + options.username + '/notices', {
                     cache: 'reload'
                 })
                 .then((response) => {
@@ -28,7 +28,28 @@ function update() {
                 .then((notifications) => {
                     browser.browserAction.enable();
 
-                    console.log(notifications.games_to_move + notifications.challenge_waiting);
+                    let newCount = notifications.games_to_move + notifications.challenge_waiting;
+
+                    browser.browserAction.setBadgeText({
+                       text: newCount.toString()
+                    });
+
+                    if (count >= newCount) {
+                        return;
+                    }
+
+                    count = newCount;
+
+                    if (count <= 0) {
+                        return;
+                    }
+
+                    browser.notifications.create({
+                        type: 'basic',
+                        iconUrl: browser.extension.getURL('icons/notification.png'),
+                        title: 'Your Turn!',
+                        message: 1 === count ? "It's your turn to move." : "It's your turn to move, " + count + ' games are waiting.'
+                    });
                 })
                 .catch((error) => {
                     browser.browserAction.setTitle({
@@ -39,7 +60,7 @@ function update() {
         });
 }
 
-setInterval(update, 1000 * 10);
+setInterval(update, 1000 * 60);
 
 browser.browserAction.onClicked.addListener((e) => {
     browser.tabs.create({
