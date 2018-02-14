@@ -31,7 +31,7 @@ function update() {
                     let newCount = notifications.games_to_move + notifications.challenge_waiting;
 
                     browser.browserAction.setBadgeText({
-                       text: newCount.toString()
+                       text: newCount > 0 ? newCount.toString() : ''
                     });
 
                     if (count >= newCount) {
