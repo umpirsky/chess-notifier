@@ -1,0 +1,3 @@
+#!/bin/sh
+
+jq -s '.[0] * .[1]' src/manifest/common.json src/manifest/$1.json > dist/manifest.json

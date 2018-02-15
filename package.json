@@ -14,5 +14,9 @@
   "homepage": "https://github.com/umpirsky/chess-notifier",
   "dependencies": {
     "webextension-polyfill": "0.2.1"
+  },
+  "scripts": {
+    "build:firefox": "./bin/build firefox",
+    "build:chrome": "./bin/build chrome"
   }
 }

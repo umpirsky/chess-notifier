@@ -1,0 +1,14 @@
+{
+    "icons": {
+        "64": "icons/64/pawn.svg"
+    },
+    "background": {
+        "scripts": [
+            "node_modules/webextension-polyfill/dist/browser-polyfill.min.js",
+            "background.js"
+        ]
+    },
+    "browser_action": {
+        "default_icon": "icons/64/pawn.svg"
+    }
+}

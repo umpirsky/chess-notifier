@@ -7,22 +7,10 @@
         "name": "Saša Stamenković",
         "url": "http://umpirsky.com"
     },
-    "applications": {
-        "gecko": {
-            "id": "chess-notifier@umpirsky.com"
-        }
-    },
-    "icons": {
-        "64": "icons/64/pawn.svg"
-    },
     "background": {
         "scripts": [
-            "node_modules/webextension-polyfill/dist/browser-polyfill.min.js",
             "background.js"
         ]
-    },
-    "browser_action": {
-        "default_icon": "icons/64/pawn.svg"
     },
     "permissions": ["*://api.chess.com/*", "tabs", "storage", "notifications"],
     "options_ui": {

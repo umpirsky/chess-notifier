@@ -1,0 +1,13 @@
+{
+    "applications": {
+        "gecko": {
+            "id": "chess-notifier@umpirsky.com"
+        }
+    },
+    "icons": {
+        "64": "icons/64/pawn.svg"
+    },
+    "browser_action": {
+        "default_icon": "icons/64/pawn.svg"
+    }
+}
