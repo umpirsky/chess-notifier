@@ -9,6 +9,9 @@
         ]
     },
     "permissions": ["*://api.chess.com/*", "tabs", "storage", "notifications"],
+    "icons": {
+        "64": "icons/128/pawn_color.png"
+    },
     "options_ui": {
         "page": "options.html"
     }
