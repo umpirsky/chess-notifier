@@ -1,4 +1,8 @@
 {
+    "developer": {
+        "name": "Saša Stamenković",
+        "url": "http://umpirsky.com"
+    },
     "applications": {
         "gecko": {
             "id": "chess-notifier@umpirsky.com"
