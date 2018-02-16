@@ -26,6 +26,9 @@ function update() {
                     throw new Error(response.statusText);
                 })
                 .then((notifications) => {
+                    browser.browserAction.setTitle({
+                        title: ''
+                    });
                     browser.browserAction.enable();
 
                     let newCount = notifications.games_to_move + notifications.challenge_waiting;
