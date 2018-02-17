@@ -1,6 +1,6 @@
 # Chess Notifier
 
-Get [Chess.com](https://www.chess.com) browser notifications on your desktop. Never loose on time again!
+Get [Chess.com](https://www.chess.com) browser notifications on your desktop. Never lose on time again!
 
 ## Install
 
