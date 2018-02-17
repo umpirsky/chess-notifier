@@ -49,7 +49,7 @@ function update() {
 
                     browser.notifications.create({
                         type: 'basic',
-                        iconUrl: browser.extension.getURL('icons/notification.png'),
+                        iconUrl: browser.extension.getURL('icons/128/pawn_color.png'),
                         title: 'Your Turn!',
                         message: 1 === count ? "It's your turn to move." : "It's your turn to move, " + count + ' games are waiting.'
                     });
