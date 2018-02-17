@@ -18,7 +18,7 @@
   "scripts": {
     "build:firefox": "./bin/build firefox",
     "build:chrome": "./bin/build chrome",
-    "pack": "rm chess-notifier.xpi; cd dist; zip -r ../chess-notifier.xpi . *",
+    "pack": "rm chess-notifier.zip; cd dist; zip -r ../chess-notifier.zip . *",
     "pack:firefox": "./bin/build firefox && npm run pack",
     "pack:chrome": "./bin/build chrome && npm run pack"
   }

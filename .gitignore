@@ -2,3 +2,4 @@ node_modules
 npm-debug.log
 dist
 chess-notifier.xpi
+chess-notifier.zip

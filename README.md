@@ -4,7 +4,7 @@ Get [Chess.com](https://www.chess.com) browser notifications on your desktop. Ne
 
 ## Install
 
-* **Chrome** - install from the [Chrome Web Store](#).
+* **Chrome** - install from the [Chrome Web Store](https://chrome.google.com/webstore/detail/chess-notifier/nkmckbhgglpggfklbhkgmkeoodhhddfj).
 * **Firefox** - install from the [Firefox Marketplace](https://addons.mozilla.org/en-US/firefox/addon/chess-notifier/)
 
 ### Install from cource
