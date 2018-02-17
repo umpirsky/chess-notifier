@@ -66,8 +66,19 @@ function update() {
 setInterval(update, 1000 * 60);
 
 browser.browserAction.onClicked.addListener((e) => {
-    browser.tabs.create({
-        'url': 'https://www.chess.com/daily/games/current',
-        'active': true
+    browser.storage.local.get({
+            username: ''
+        })
+        .then((options) => {
+            if (!options.username) {
+                browser.runtime.openOptionsPage();
+
+                return;
+            }
+
+        browser.tabs.create({
+            'url': 'https://www.chess.com/daily/games/current',
+            'active': true
+        });
     });
 });
