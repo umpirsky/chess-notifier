@@ -8,5 +8,4 @@
 
 Get Chess.com browser notifications on your desktop. Never loose on time again!
 
-![pawn](https://github.com/umpirsky/chess-notifier/raw/master/src/icons/128/pawn_color.png)
 
