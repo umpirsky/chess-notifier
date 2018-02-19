@@ -9,6 +9,11 @@
         }
     },
     "browser_action": {
-        "default_icon": "icons/64/pawn.svg"
+        "default_icon": "icons/64/pawn.svg",
+        "theme_icons": [{
+            "light": "icons/64/pawn_light.svg",
+            "dark": "icons/64/pawn.svg",
+            "size": 64
+        }]
     }
 }
