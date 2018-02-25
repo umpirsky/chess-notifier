@@ -2,9 +2,13 @@ var count = 0;
 
 function update() {
     browser.storage.local.get({
-            username: ''
+            username: '',
+            showNotifications: false,
+            checkingInterval: 60
         })
         .then((options) => {
+            setTimeout(update, 1000 * Math.max(10, options.checkingInterval));
+
             if (!options.username) {
                 return;
             }
@@ -47,12 +51,14 @@ function update() {
                         return;
                     }
 
-                    browser.notifications.create({
-                        type: 'basic',
-                        iconUrl: browser.extension.getURL('icons/128/pawn_color.png'),
-                        title: 'Your Turn!',
-                        message: 1 === count ? "It's your turn to move." : "It's your turn to move, " + count + ' games are waiting.'
-                    });
+                    if (options.showNotifications) {
+                        browser.notifications.create({
+                            type: 'basic',
+                            iconUrl: browser.extension.getURL('icons/128/pawn_color.png'),
+                            title: 'Your Turn!',
+                            message: 1 === count ? "It's your turn to move." : "It's your turn to move, " + count + ' games are waiting.'
+                        });
+                    }
                 })
                 .catch((error) => {
                     browser.browserAction.setTitle({
@@ -63,7 +69,7 @@ function update() {
         });
 }
 
-setInterval(update, 1000 * 60);
+update();
 
 browser.browserAction.onClicked.addListener((e) => {
     browser.storage.local.get({
