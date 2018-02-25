@@ -13,7 +13,11 @@
         "theme_icons": [{
             "light": "icons/64/pawn_light.svg",
             "dark": "icons/64/pawn.svg",
-            "size": 64
+            "size": 16
+        }, {
+            "light": "icons/64/pawn_light.svg",
+            "dark": "icons/64/pawn.svg",
+            "size": 32
         }]
     }
 }
