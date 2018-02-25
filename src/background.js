@@ -77,7 +77,7 @@ browser.browserAction.onClicked.addListener((e) => {
             }
 
         browser.tabs.create({
-            'url': 'https://www.chess.com/daily/games/current',
+            'url': 'https://www.chess.com/goto_ready_game',
             'active': true
         });
     });
