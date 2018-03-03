@@ -1,29 +1,54 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <script type="application/javascript" src="node_modules/webextension-polyfill/dist/browser-polyfill.min.js"></script>
-    </head>
-    <body>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="py-5 text-center">
+            <h2>Preferences</h2>
+            <p class="lead">Configure Chess Notifier by filling the form below.</p>
+        </div>
         <form>
-            <fieldset>
-                <div style="color: green; display: none;" id="status">Options saved.</div>
-                <legend>Options</legend>
-                <p>
-                    <label for="access-token">Chess.com username</label>
-                    <input type="text" name="username" id="username">
-                </p>
-                <p>
-                    <label for="checking_interval">Checking interval</label>
-                    <input type="number" name="checking_interval" id="checking_interval"> seconds
-                </p>
-                <p>
-                    <label for="show_notifications">Show desktop notifications</label>
-                    <input type="checkbox" name="show_notifications" id="show_notifications">
-                </p>
-                <button type="submit">Save</button>
-            </fieldset>
+            <div id="status" class="alert alert-success" style="display: none;" role="alert">Preferences saved.</div>
+            <div class="form-group row">
+                <label for="access-token" class="col-sm-3 col-form-label">Chess.com username</label>
+                <div class="col-sm-9">
+                    <input placeholder="Chess.com username" class="form-control" type="text" name="username" id="username">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="checking_interval" class="col-sm-3 col-form-label">Checking interval</label>
+                <div class="col-sm-6">
+                    <div class="input-group">
+                        <input placeholder="Checking interval" class="form-control" type="number" name="checking_interval" id="checking_interval">
+                        <div class="input-group-append">
+                            <span class="input-group-text">seconds</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-3">Notifications</div>
+                <div class="col-sm-9">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="show_notifications" id="show_notifications">
+                        <label class="form-check-label" for="show_notifications">Show desktop notifications</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-9">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </div>
         </form>
-        <script src="options.js"></script>
-    </body>
+    </div>
+    <script type="application/javascript" src="node_modules/webextension-polyfill/dist/browser-polyfill.min.js"></script>
+    <script src="options.js"></script>
+</body>
+
 </html>
