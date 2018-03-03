@@ -1,5 +1,6 @@
 #!/bin/sh
 
 rm -rf dist/*
+rm -rf node_modules/bootstrap/js node_modules/bootstrap/scss node_modules/bootstrap/dist/js node_modules/jquery node_modules/popper.js
 cp -r src/*.html src/*.js src/icons node_modules dist
 jq -s '.[0] * .[1]' src/manifest/common.json src/manifest/$1.json > dist/manifest.json
