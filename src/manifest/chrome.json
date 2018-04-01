@@ -2,7 +2,7 @@
     "author": "Saša Stamenković",
     "background": {
         "scripts": [
-            "node_modules/webextension-polyfill/dist/browser-polyfill.min.js",
+            "browser-polyfill.min.js",
             "background.js"
         ]
     },
